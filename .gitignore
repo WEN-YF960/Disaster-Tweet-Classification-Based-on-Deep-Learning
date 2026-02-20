@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env
+venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset (不要上传Kaggle数据)
+data/raw/*.csv
+data/raw/*.zip
+
+# Models
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# Outputs
+outputs/
+submission.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
