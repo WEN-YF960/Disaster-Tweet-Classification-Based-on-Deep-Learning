@@ -118,6 +118,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = TransformerClassifier().to(device)    
 
 
+
 # ===== 7. Model Training =====
 
 criterion = nn.CrossEntropyLoss()                             # Define loss function
