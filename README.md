@@ -127,7 +127,7 @@ The best model is saved as:   **best_model.pt**`
 ---
 
 ## 📂 Project Structure
-
+```
 data/
 └── raw/
 ├── train.csv
@@ -138,6 +138,7 @@ src/
 
 best_model.pt
 README.md
+```
 
 ---
 
@@ -188,4 +189,4 @@ Potential next steps:
 ## ✨ Notes
 This project is part of my ongoing NLP/LLM learning path, moving from:
 
-Traditional ML NLP → Deep Learning NLP → LLM Fine-tuning
+`Traditional ML NLP → Deep Learning NLP → LLM Fine-tuning`
