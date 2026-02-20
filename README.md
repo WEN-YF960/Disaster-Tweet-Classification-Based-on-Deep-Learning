@@ -38,11 +38,11 @@ This reflects a transition from traditional NLP to modern deep learning approach
 ```
 Tweet Text
 ↓
-Tokenizer (BERT)
+Tokenizer 
 ↓
 Transformer Encoder
 ↓
-Pooling ([CLS] / pooler_output)
+Pooling 
 ↓
 Dropout
 ↓
