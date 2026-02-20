@@ -5,14 +5,17 @@ __pycache__/
 
 # Virtual env
 venv/
+.venv/
+env/
 .env/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Dataset (不要上传Kaggle数据)
+# Dataset
 data/raw/*.csv
 data/raw/*.zip
+!data/raw/.gitkeep
 
 # Models
 *.pt
@@ -21,15 +24,22 @@ data/raw/*.zip
 *.joblib
 
 # Outputs
-outputs/
-submission.csv
+outputs/*
+!outputs/metrics.json
 
 # OS
 .DS_Store
 Thumbs.db
+*.tmp
+*.bak
 
-# VSCode
+# Editors
 .vscode/
+.idea/
 
 # Logs
 *.log
+
+# Windows
+*.tmp
+*.bak
