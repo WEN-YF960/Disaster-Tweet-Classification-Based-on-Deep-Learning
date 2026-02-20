@@ -35,7 +35,7 @@ This reflects a transition from traditional NLP to modern deep learning approach
 
 ### Pipeline
 
-Tweet Text
+```Tweet Text
 ↓
 Tokenizer (BERT)
 ↓
@@ -48,6 +48,7 @@ Dropout
 Linear Layer
 ↓
 Prediction
+```
 
 ---
 
