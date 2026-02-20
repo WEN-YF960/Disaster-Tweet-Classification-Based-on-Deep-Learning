@@ -122,7 +122,7 @@ Val acc: 0.8424
 Val f1: 0.8148
 ```
 
-The best model is saved as:   **best_model.pt**`
+The best model is saved as:  `best_model.pt`
 
 ---
 
