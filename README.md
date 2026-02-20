@@ -130,7 +130,7 @@ The best model is saved as:   **best_model.pt**`
 ```
 data/
 └── raw/
-├──sample_submission.csv
+├── sample_submission.csv
 ├── train.csv
 └── test.csv
 
