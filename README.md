@@ -182,3 +182,10 @@ Potential next steps:
 - Data augmentation
 - LoRA / parameter-efficient fine-tuning
 - Error analysis & explainability
+
+---
+
+## ✨ Notes
+This project is part of my ongoing NLP/LLM learning path, moving from:
+
+Traditional ML NLP → Deep Learning NLP → LLM Fine-tuning
