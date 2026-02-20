@@ -35,7 +35,8 @@ This reflects a transition from traditional NLP to modern deep learning approach
 
 ### Pipeline
 
-```Tweet Text
+```
+Tweet Text
 ↓
 Tokenizer (BERT)
 ↓
@@ -101,12 +102,25 @@ The model is evaluated using:
 
 Example output format:
 
+```
 Epoch 1/3
-Train loss: ...
-Val loss: ...
-Val acc: ...
-Val f1: ...
+Train loss: 0.4845
+Val loss: 0.3791
+Val acc: 0.8444
+Val f1: 0.8121
 
+Epoch 2/3
+Train loss: 0.3344
+Val loss: 0.3727
+Val acc: 0.8536
+Val f1: 0.8200
+
+Epoch 3/3
+Train loss: 0.2481
+Val loss: 0.4566
+Val acc: 0.8424
+Val f1: 0.8148
+```
 
 The best model is saved as: **best_model.pt**
 
