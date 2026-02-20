@@ -6,7 +6,7 @@ This project is an upgraded version of my previous classical machine learning so
 
 ---
 
-## 📚 Project Overview
+## 📝 Project Overview
 
 The goal is to classify whether a tweet describes a **real disaster event** or not.
 
@@ -130,6 +130,7 @@ The best model is saved as:   **best_model.pt**`
 ```
 data/
 └── raw/
+├──sample_submission.csv
 ├── train.csv
 └── test.csv
 
@@ -183,6 +184,15 @@ Potential next steps:
 - Data augmentation
 - LoRA / parameter-efficient fine-tuning
 - Error analysis & explainability
+
+---
+
+## 📚 Dataset Source
+Kaggle:
+
+Natural Language Processing with Disaster Tweets
+
+https://www.kaggle.com/competitions/nlp-getting-started/data
 
 ---
 
