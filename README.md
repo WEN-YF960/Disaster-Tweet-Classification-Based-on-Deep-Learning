@@ -75,20 +75,20 @@ This keeps semantic information while reducing noise.
 **Key configurations:**
 
 - Batch size:
-  - Train: 16  
-  - Validation: 32  
-- Max sequence length: 128  
+  - Train: `16`
+  - Validation: `32`  
+- Max sequence length: `128`  
 - Optimizer: AdamW  
 - Learning rate: `2e-5`  
 - Scheduler: Linear warmup + decay  
 - Loss function: CrossEntropyLoss  
-- Epochs: 3  
+- Epochs: `3`  
 
 ### Additional training practices:
 
 - Gradient clipping  
 - Stratified train/validation split  
-- Best model checkpoint saving (based on F1 score)
+- Best model checkpoint saving (based on `F1 score`)
 
 ---
 
