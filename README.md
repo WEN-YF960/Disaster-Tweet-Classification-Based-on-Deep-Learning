@@ -6,7 +6,7 @@ This project is an upgraded version of my previous classical machine learning so
 
 ---
 
-##  Project Overview
+## 📚 Project Overview
 
 The goal is to classify whether a tweet describes a **real disaster event** or not.
 
@@ -21,7 +21,7 @@ This reflects a transition from traditional NLP to modern deep learning approach
 
 ---
 
-##  Model Architecture
+## 🖥️ Model Architecture
 
 **Encoder:**
 
@@ -122,7 +122,7 @@ Val acc: 0.8424
 Val f1: 0.8148
 ```
 
-The best model is saved as: **best_model.pt**
+The best model is saved as:   **best_model.pt**`
 
 ---
 
@@ -147,8 +147,38 @@ README.md
 
 ```bash
 pip install torch transformers scikit-learn pandas numpy
+```
 
 ### 2. Prepare dataset
 
 Place dataset:
+```
+data/raw/train.csv
+data/raw/test.csv
+```
+(Kaggle Disaster Tweets dataset)
 
+### 3. Train model
+```
+python train.py
+```
+
+---
+
+## 🔎 Key Learning Outcomes
+Through this project I:
+- Implemented Transformer fine-tuning in PyTorch
+- Learned tokenizer–encoder integration
+- Understood training dynamics of pretrained LMs
+- Practiced evaluation and checkpointing
+- Compared classical ML vs deep learning NLP pipelines
+
+---
+
+## 📈 Future Improvements
+Potential next steps:
+- Hyperparameter tuning
+- Larger pretrained models (RoBERTa, DeBERTa)
+- Data augmentation
+- LoRA / parameter-efficient fine-tuning
+- Error analysis & explainability
