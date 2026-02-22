@@ -17,7 +17,6 @@ Compared with the earlier ML pipeline (TF-IDF + Logistic Regression / Embedding 
 - Implements a full PyTorch training pipeline  
 - Supports evaluation metrics and model checkpoint saving  
 
-This reflects a transition from traditional NLP to modern deep learning approaches.
 
 ---
 
