@@ -121,50 +121,38 @@ model = TransformerClassifier().to(device)
 
 # ===== 7. Model Training =====
 
-criterion = nn.CrossEntropyLoss()                             # Define loss function
-optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)    # Initialize AdamW optimizer to update model parameters based on gradients
+def train_one_epoch(model, train_loader, device, optimizer, scheduler, criterion):
+    model.train()
+    total_loss = 0.0
 
-num_epochs = 3
-total_steps = num_epochs * len(train_loader)                  # Compute total number of training steps
-
-scheduler = get_linear_schedule_with_warmup(                  # Learning rate scheduler
-    optimizer,
-    num_warmup_steps=int(0.1 * total_steps),
-    num_training_steps=total_steps
-)
-
-def train_one_epoch():     # Define function to train one epoch
-    model.train()          # Enable training mode (dropout active)
-    running_loss = 0.0
-
-    for step, batch in enumerate(train_loader):                 # Iterate through dataloader, processing one batch at a time
+    for step, batch in enumerate(train_loader):
         input_ids = batch["input_ids"].to(device)
         attention_mask = batch["attention_mask"].to(device)
         labels = batch["labels"].to(device)
 
-        optimizer.zero_grad()  # 1.Clear gradients from previous iteration
+        optimizer.zero_grad()
 
-        logits = model(input_ids, attention_mask)    # 2.Forward pass
-        loss = criterion(logits, labels)             # 3.Compute loss
+        logits = model(input_ids, attention_mask)
+        loss = criterion(logits, labels)
 
-        loss.backward()                                          # 4.Backward pass (compute gradients)
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)  # 5.Gradient clipping to prevent exploding gradients
-        
-        optimizer.step()   # 6.Update model parameters
-        scheduler.step()   # 7.Update learning rate
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+
+        optimizer.step()
+        scheduler.step()
 
         total_loss += loss.item()
 
         if step % 100 == 0:
             print(f"[train] step={step} loss={loss.item():.4f}")
 
-    return running_loss / len(train_loader)
+    return total_loss / len(train_loader)
 
 
 
 # ===== 8. Validation / Metrics / Save Best Model =====
 
-def evaluate():
+def evaluate(model, val_loader, device, criterion):
     model.eval()            # Switch to evaluation mode (dropout disabled)
     
     total_loss = 0.0        # Disable autograd to save memory and speed up evaluation (required for eval)
@@ -194,6 +182,7 @@ def evaluate():
     return total_loss / len(val_loader), acc, f1
 
 best_f1 = 0.0
+num_epochs = 3
 
 for epoch in range(num_epochs):
     print(f"\n===== Epoch {epoch+1}/{num_epochs} =====")
