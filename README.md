@@ -193,9 +193,3 @@ Natural Language Processing with Disaster Tweets
 
 https://www.kaggle.com/competitions/nlp-getting-started/data
 
----
-
-## ✨ Notes
-This project is part of my ongoing NLP/LLM learning path, moving from:
-
-`Traditional ML NLP → Deep Learning NLP → LLM Fine-tuning`
